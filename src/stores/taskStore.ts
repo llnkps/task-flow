@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { Task, TaskFormData} from "../types"
 
-interface TaskState
+interface TaskState {
     tasks: Task[];
     addTask: (taskData: TaskFormData) => void;
     updateTask: (id: string, taskData: Partial<TaskFormData>) => void;
